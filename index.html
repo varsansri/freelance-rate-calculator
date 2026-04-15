@@ -25,6 +25,19 @@
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How do I calculate my freelance hourly rate?","acceptedAnswer":{"@type":"Answer","text":"To calculate your freelance hourly rate: (1) Find your gross income needed by reversing your tax rate from your desired take-home pay. (2) Add annual business expenses. (3) Divide by your total billable hours per year. This gives your minimum rate. Multiply by 1.3x for a comfortable rate and 2x for a premium rate."}},
+    {"@type":"Question","name":"What is a good freelance hourly rate?","acceptedAnswer":{"@type":"Answer","text":"A good freelance hourly rate depends on your skill, location, and niche. Beginners in design or writing often start at $25–50/hr. Mid-level developers charge $75–150/hr. Senior specialists and consultants charge $150–400+/hr. The key is to always calculate your minimum viable rate first, then add a buffer."}},
+    {"@type":"Question","name":"How many billable hours can a freelancer work per year?","acceptedAnswer":{"@type":"Answer","text":"Realistically, freelancers bill 4–6 hours per working day, not 8. The rest goes to admin, marketing, meetings, and non-billable work. With 6 billable hours and 2 weeks vacation, that's 1,500 billable hours/year. This calculator uses your actual billable hours, not theoretical ones."}},
+    {"@type":"Question","name":"Why do freelancers charge more than employees?","acceptedAnswer":{"@type":"Answer","text":"Freelancers must charge more because they pay their own taxes (self-employment tax can add 15–30%), fund their own benefits, cover business expenses like software and equipment, handle their own marketing and admin, and have no paid vacation or sick days. A freelancer charging $50/hr often earns less net than an employee earning $35/hr."}},
+    {"@type":"Question","name":"Should I charge by the hour or per project as a freelancer?","acceptedAnswer":{"@type":"Answer","text":"Project-based pricing is usually better for experienced freelancers as it rewards efficiency. Hourly is safer when scope is unclear. Either way, your hourly rate calculation sets the floor — any project price should equal at least your estimated hours × your minimum rate."}}
+  ]
+}
+</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -195,6 +208,18 @@ select{
 }
 footer{text-align:center;padding:12px;font-size:11px;color:var(--text-muted);opacity:.7}
 footer a{color:var(--accent);text-decoration:none}
+.faq-section{margin-top:8px;margin-bottom:4px}
+.faq-title{font-size:14px;font-weight:700;color:var(--text-muted);margin-bottom:12px;padding:0 2px}
+.faq-list{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.faq-item summary{padding:12px 16px;font-size:13px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent}
+.faq-item summary::after{content:'›';font-size:18px;color:var(--accent);transition:transform .2s;flex-shrink:0;margin-left:8px}
+.faq-item[open] summary::after{transform:rotate(90deg)}
+.faq-item p{padding:0 16px 12px;font-size:12px;color:var(--text-muted);line-height:1.6}
+.seo-text{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:12px}
+.seo-text h2{font-size:14px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.seo-text p{font-size:12px;color:var(--text-muted);line-height:1.65;margin-bottom:10px}
+.seo-text p:last-child{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -343,7 +368,39 @@ footer a{color:var(--accent);text-decoration:none}
 
   </div>
 
-  <footer>Free freelancer tools by <a href="https://t.me/DTB_Academy" target="_blank" rel="noopener">Maxi D Bobby Signals</a> · Not financial advice</footer>
+  <section class="faq-section">
+    <h2 class="faq-title">Freelance Rate Calculator — FAQ</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How do I calculate my freelance hourly rate?</summary>
+        <p>Take your desired take-home pay, reverse the tax rate to get gross needed, add business expenses, then divide by annual billable hours. This tool does all that math instantly — just enter your numbers.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is a good freelance hourly rate in 2024?</summary>
+        <p>It depends on your skill and market. Entry-level freelancers charge $25–50/hr. Mid-level specialists charge $75–150/hr. Senior consultants charge $150–500+/hr. Calculate your minimum first, then price based on value delivered.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why should freelancers charge more than employees?</summary>
+        <p>Freelancers pay self-employment tax (15–30% extra), cover their own benefits, buy their own software and gear, handle unpaid admin time, and have no paid sick days or vacation. A $50/hr freelancer often earns less than a $35/hr employee after all costs.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How many billable hours do freelancers actually work per year?</summary>
+        <p>Realistically 4–6 billable hours per day, not 8. The rest goes to admin, proposals, marketing, and non-billable tasks. With 6 billable hours and 2 weeks off, that's ~1,500 hours/year. Use realistic numbers for an accurate rate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Should I charge per hour or per project as a freelancer?</summary>
+        <p>Project pricing is better once you're experienced — it rewards your efficiency. Hourly works when scope is unclear. Either way, your hourly rate is your floor: never take a project that pays less than your minimum × estimated hours.</p>
+      </details>
+    </div>
+    <div class="seo-text">
+      <h2>How to Calculate Your Freelance Hourly Rate (The Right Way)</h2>
+      <p>Most freelancers price themselves by looking at competitors or guessing a number that "feels right." This leads to either undercharging (losing money after taxes) or overcharging (losing clients). The correct approach is to calculate your rate from your actual financial needs.</p>
+      <p>This freelance hourly rate calculator works backwards from your desired income goal. It accounts for self-employment tax, business expenses, realistic billable hours, and vacation time — giving you three rates: the minimum you need to break even, a comfortable rate with a 30% buffer, and a premium rate for specialist work.</p>
+      <p>The most important insight: if you're charging less than your calculated minimum rate, your freelance business is operating at a loss — even if your bank account looks healthy short-term. Use this calculator before setting your next client proposal.</p>
+    </div>
+  </section>
+
+  <footer>Free tools by <a href="https://t.me/DTB_Academy" target="_blank" rel="noopener">DTB Academy</a> · Not financial advice</footer>
 </div>
 
 <div class="sticky">
